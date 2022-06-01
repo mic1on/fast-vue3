@@ -8,7 +8,6 @@ import vueJsx from '@vitejs/plugin-vue-jsx'
 import { ConfigSvgIconsPlugin } from './svgIcons'
 import { AutoRegistryComponents } from './component'
 import { AutoImportDeps } from './autoImport'
-import { ConfigMockPlugin } from './mock'
 import { ConfigVisualizerConfig } from './visualizer'
 import { ConfigCompressPlugin } from './compress'
 import { ConfigPagesPlugin } from './pages'
@@ -34,9 +33,6 @@ export function createVitePlugins(isBuild: boolean) {
 
   // vite-plugin-svg-icons
   vitePlugins.push(ConfigSvgIconsPlugin(isBuild))
-
-  // vite-plugin-mock
-  vitePlugins.push(ConfigMockPlugin(isBuild))
 
   // rollup-plugin-visualizer
   vitePlugins.push(ConfigVisualizerConfig())
